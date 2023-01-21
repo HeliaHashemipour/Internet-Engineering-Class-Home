@@ -1,7 +1,7 @@
 
 :root{
-  --margin: 1%;
-  --padding: 1%;
+  --margin: 15px;
+  --padding: 15px;
 }
 
 body {
@@ -30,6 +30,7 @@ body {
 
 #top_container{
   background-image: url(/img/header.jpg); 
+  height: 95vh;
   background-repeat: no-repeat;
   text-align: center;
   background-size: cover;
@@ -64,7 +65,7 @@ body {
   width: 30%;
   margin: auto;
   position: relative;
-  animation: horizontal-text 15s 1;
+  animation: horizontal-text 20s 1;
   animation-direction: alternate;
   /* text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324; */
 }
@@ -78,7 +79,7 @@ body {
   letter-spacing: 10px;
   margin: auto;
   bottom: 20%;
-  animation: horizontal-text 15s 1;
+  animation: horizontal-text 20s 1;
   position: relative;
   animation-direction: alternate;
   /* text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324; */
@@ -94,7 +95,7 @@ body {
   text-align: center;
   line-height: 0.1rem;
   margin-top: 3%;
-  animation: horizontal-text 15s 1;
+  animation: horizontal-text 20s 1;
   position: relative;
   animation-direction: alternate;
   /* text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324; */
@@ -129,6 +130,7 @@ body {
   cursor: pointer;
   margin: 36px;
   border: #0077e6;
+  top: 20%;
 }
 
 .header-button{
@@ -167,15 +169,22 @@ body {
   display: flex;
   margin: var(--margin);
   padding: var(--padding);
+  font-size: 0.5cm;
+  line-height: 3ch;
   
 }
 
 .calc4{
-  width: calc(25%);
-  background-color: #6af2a0;
+  width: calc(20%);
+  background-color: #e6ece9;
   margin: var(--margin);
   padding: var(--padding);
+  opacity: 0.95;
   float: left;
+  text-align: center;
+  border-radius: 5px;
+  min-height: 400px;
+  height: 30em;
 }
 
 .calc3{
@@ -195,5 +204,32 @@ body {
 
 #content {
   background-image: url(/img/Background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 95vh;
   overflow: auto;
+  padding-top: 5%;
+  padding-left: 3%; 
+}
+
+.lecture-icons{
+  width: 50%;
+  opacity: 0.5;
+}
+
+.lecture-card-text{
+  margin: 6%;
+  opacity: 0.5;
+}
+
+.lecture-icons-title{
+  opacity: 0.5;
+  text-align: center;
+}
+
+.calc4:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: var(--g);
+  opacity: 0.9;
+  transform: scale(1.05);
 }
