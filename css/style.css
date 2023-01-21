@@ -1,7 +1,7 @@
 
 :root{
-  --margin: 1rem;
-  --padding: 0.3rem;
+  --margin: 1%;
+  --padding: 1%;
 }
 
 body {
@@ -28,36 +28,135 @@ body {
   display: table;
 }
 
-/* #top_container{
-  background-image: url(../images/IMG_20190629_123000.jpg); 
-  background-repeat: no-repeat;
-  margin: var(--margin);
-  padding: var(--padding);
-  max-width: 10%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
- position: relative;
-
-} */
-
 #top_container{
+  background-image: url(/img/header.jpg); 
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: cover;
+  margin: var(--margin);
+  background-blend-mode: multiply;
+  /* padding: var(--padding); */
+  /* height: auto; */
+}
+
+/* #top_container{
   text-align: left;
   margin: var(--margin);
   padding: var(--padding);
   background-color: #0077e6;
   display: flex;
-}
+} */
 
 #bottom_container{
   text-align: left;
   margin: var(--margin);
   padding: var(--padding);
   background-color: #0077e6;
-  display: flex;
-   
+  display: flex; 
+}
+
+#header-text-bold{
+  padding-top: 14%;
+  font-size: 4rem;
+  letter-spacing: 30px;
+  /* font-weight: bold; */
+  font-family: 'Arial', sans-serif;
+  width: 30%;
+  margin: auto;
+  position: relative;
+  animation: horizontal-text 15s 1;
+  animation-direction: alternate;
+  /* text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324; */
+}
+
+
+#header-text1{
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  font-family: 'Arial', sans-serif;
+  width: 40%;
+  letter-spacing: 10px;
+  margin: auto;
+  bottom: 20%;
+  animation: horizontal-text 15s 1;
+  position: relative;
+  animation-direction: alternate;
+  /* text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324; */
+}
+
+#header-text2{
+  font-size: 1.5rem;
+  /* font-weight: bold; */
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 10px;
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  line-height: 0.1rem;
+  margin-top: 3%;
+  animation: horizontal-text 15s 1;
+  position: relative;
+  animation-direction: alternate;
+  /* text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324; */
+}
+
+@keyframes horizontal-text {
+  0%   {color: white; left: -80%; top: 0px;}
+  25%  {color: white; left: 0px; top: 0px;}
+}
+
+.header-button{
+  width: 20%;
+  margin: 3% auto 10% auto;
+  padding: 1%;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 50px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  color: white;
+}
+
+.header-button {
+  background-color: white;
+  color : #8b8888;
+  width: 25%;
+  margin: 3% auto 10% auto;
+  padding: 1%;
+  border-radius: 25px;
+  font-family: 'Monospace', sans-serif;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  border: #0077e6;
+}
+
+.header-button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.header-button:after {
+  position: absolute;
+  opacity: 0;  
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.header-button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+  box-shadow: 0 10px 20px -8px #008fd7;
+  border: 4px solid #008fd7;
+  color: #008fd7;
+}
+
+.header-button:hover:after {
+  opacity: 3;
+  left: 10px;
 }
 
 #content {
@@ -76,6 +175,7 @@ body {
   background-color: #6af2a0;
   margin: var(--margin);
   padding: var(--padding);
+  float: left;
 }
 
 .calc3{
@@ -93,42 +193,7 @@ body {
 }
 
 
-
-
-#scroll-text {
-  text-align: right;
-
-  /* animation properties */
-  -moz-transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-  
-  -moz-animation: my-animation 15s linear infinite;
-  -webkit-animation: my-animation 15s linear infinite;
-  animation: my-animation 15s linear infinite;
-}
-
-/* for Firefox */
-@-moz-keyframes my-animation {
-  from { -moz-transform: translateX(-100%); }
-  to { -moz-transform: translateX(100%); }
-}
-
-/* for Chrome */
-@-webkit-keyframes my-animation {
-  from { -webkit-transform: translateX(-100%); }
-  to { -webkit-transform: translateX(100%); }
-}
-
-@keyframes my-animation {
-  from {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  to {
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
+#content {
+  background-image: url(/img/Background.jpg);
+  overflow: auto;
 }
